@@ -4,7 +4,7 @@ cd /tmp
 sudo xbps-install -Syu
 sudo xbps-install -Syu
 sudo xbps-install git xtools
-sudo rm -r void-packages
+sudo rm -rf void-packages
 sudo -u nobody git clone https://github.com/void-linux/void-packages.git
 cd void-packages
 sudo -u nobody ./xbps-src binary-bootstrap

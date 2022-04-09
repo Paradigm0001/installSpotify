@@ -1,4 +1,5 @@
 #!/bin/sh
+set -e
 cd /tmp
 sudo xbps-install -Syu
 sudo xbps-install -Syu

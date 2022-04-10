@@ -7,3 +7,4 @@ sudo -u '#1000' ./xbps-src binary-bootstrap
 sudo -u '#1000' ./xbps-src pkg spotify
 cd void-packages
 sudo xbps-install --repository=hostdir/binpkgs/nonfree spotify
+xi spotify

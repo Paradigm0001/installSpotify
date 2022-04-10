@@ -1,0 +1,20 @@
+# Template file for 'MoarVM'
+pkgname=MoarVM
+version=2022.03
+revision=1
+build_style=configure
+configure_script="perl Configure.pl"
+configure_args="--prefix=/usr --has-libatomic_ops --has-libffi
+ --has-libtommath --has-libuv"
+hostmakedepends="perl"
+makedepends="libatomic_ops-devel libffi-devel libtommath-devel libuv-devel
+ libzstd-devel"
+short_desc="VM with adaptive optimization and JIT compilation, built for Rakudo"
+maintainer="Andy Weidenbaum <atweiden@tutanota.de>"
+license="Artistic-2.0"
+homepage="https://moarvm.org"
+changelog="https://github.com/MoarVM/MoarVM/raw/master/docs/ChangeLog"
+distfiles="https://moarvm.org/releases/MoarVM-${version}.tar.gz"
+checksum=fb71cd13912464482b99b33f0c06e9fd7c51a151c6e632a9220cf93c5855fdaf
+nocross=yes
+shlib_provides="libmoar.so"

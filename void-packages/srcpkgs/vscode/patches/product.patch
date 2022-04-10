@@ -1,0 +1,26 @@
+diff --git a/product.json b/product.json
+index 9d630f23cd7..eea95dce319 100644
+--- a/product.json
++++ b/product.json
+@@ -27,6 +27,9 @@
+ 	"licenseFileName": "LICENSE.txt",
+ 	"reportIssueUrl": "https://github.com/microsoft/vscode/issues/new",
+ 	"urlProtocol": "code-oss",
++	"quality": "stable",
++	"documentationUrl": "https://github.com/microsoft/vscode-docs",
++	"requestFeatureUrl": "https://github.com/Microsoft/vscode/issues",
+ 	"webviewContentExternalBaseUrlTemplate": "https://{{uuid}}.vscode-webview.net/insider/93a2a2fa12dd3ae0629eec01c05a28cb60ac1c4b/out/vs/workbench/contrib/webview/browser/pre/",
+ 	"extensionAllowedProposedApi": [
+ 		"ms-vscode.vscode-js-profile-flame",
+@@ -34,6 +37,11 @@
+ 		"GitHub.remotehub",
+ 		"GitHub.remotehub-insiders"
+ 	],
++	"extensionsGallery": {
++		"serviceUrl": "https://marketplace.visualstudio.com/_apis/public/gallery",
++		"cacheUrl": "https://vscode.blob.core.windows.net/gallery/index",
++		"itemUrl": "https://marketplace.visualstudio.com/items"
++	},
+ 	"builtInExtensions": [
+ 		{
+ 			"name": "ms-vscode.references-view",

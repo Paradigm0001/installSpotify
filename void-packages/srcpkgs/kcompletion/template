@@ -1,0 +1,27 @@
+# Template file for 'kcompletion'
+pkgname=kcompletion
+version=5.92.0
+revision=1
+build_style=cmake
+configure_args="-DBUILD_DESIGNERPLUGIN=ON"
+hostmakedepends="kcoreaddons extra-cmake-modules
+ qt5-host-tools qt5-qmake qt5-tools-devel"
+makedepends="kconfig-devel kwidgetsaddons-devel"
+short_desc="KDE Powerful completion framework"
+maintainer="John <me@johnnynator.dev>"
+license="LGPL-2.0-or-later"
+homepage="https://invent.kde.org/frameworks/kcompletion"
+distfiles="${KDE_SITE}/frameworks/${version%.*}/${pkgname}-${version}.tar.xz"
+checksum=08f1525c6cee8babe399c941bb85d04be9dade0341d1d85c6beccd2e93dc7ceb
+
+kcompletion-devel_package() {
+	short_desc+=" - development"
+	depends="${makedepends} ${sourcepkg}>=${version}_${revision}"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/qt5/mkspecs
+		vmove usr/lib/qt5/plugins/designer
+		vmove usr/lib/cmake
+		vmove "usr/lib/*.so"
+	}
+}

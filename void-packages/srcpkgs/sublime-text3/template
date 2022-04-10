@@ -1,0 +1,15 @@
+# Template file for 'sublime-text3'
+pkgname=sublime-text3
+version=3211
+revision=3
+archs="i686 x86_64"
+build_style=meta
+short_desc="Empty meta-package for sublime-text3"
+maintainer="Andrea Brancaleoni <miwaxe@pompel.me>"
+license="custom:EULA" #no vlicense check
+homepage="http://www.sublimetext.com/3dev"
+repository="nonfree"
+
+do_install() {
+	vdoc "${XBPS_SRCPKGDIR}/${pkgname}/INSTALL.msg"  README.voidlinux
+}
